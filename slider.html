@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slider</title>
+	<style>
+
+
+	</style>
+</head>
+<body>
+		
+	<img id="pic" src="one.png" alt="#">
+	<br>
+	<div style="text-align:center">
+		<button onclick="prev()">previous</button>
+		<button onclick="next()">next</button>
+	</div>
+
+
+<script type="text/javascript">
+var images = ["one.png","two.png","three.png","four.jpg","five.png"];
+var a=4;
+function prev(){
+	
+	a--;
+	if(a==0){
+		a = 4 ;
+	}
+	p = document.getElementById("pic");
+	p.setAttribute("src",images[a]);
+}
+
+function next(){
+	a++;
+	if(a==5){
+		a=0;
+	}
+	p=document.getElementById("pic");
+	p.setAttribute("src",images[a]);
+}
+
+
+</script>
+
+</body>
+</html>
